@@ -1,0 +1,14 @@
+Execute command: [
+  `which`
+  `cmake`
+]
+[/home/kirill/lapsizm/workspace/projects/suptertask]> "which" "cmake"
+/usr/bin/cmake
+Execute command: [
+  `cmake`
+  `--version`
+]
+[/home/kirill/lapsizm/workspace/projects/suptertask]> "cmake" "--version"
+cmake version 3.16.3
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
