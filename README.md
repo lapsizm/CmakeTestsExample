@@ -1,14 +1,11 @@
-
 ## Build
-- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install -DBUILD_TESTS=ON
-- cmake —build _build —target install
+cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
 
-## Cpack
-- cmake -H. -B_build -DCPACK_GENERATOR="TGZ"
-- cmake --build _build --target package
+-DBUILD_TESTS=ON
 
+cmake --build _build --target install
 ## Test
-- cmake —build _build —target test — ARGS=--verbose
+cmake --build _build --target test
 
 
 [![Build Status](https://travis-ci.com/lapsizm/rk3.svg?branch=master)](https://travis-ci.com/lapsizm/rk3)
