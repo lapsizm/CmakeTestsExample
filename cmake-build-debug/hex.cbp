@@ -251,7 +251,7 @@
 		<Unit filename="/home/kirill/lapsizm/workspace/projects/suptertask/examples/demo.cpp">
 			<Option target="demo"/>
 		</Unit>
-		<Unit filename="/home/kirill/lapsizm/workspace/projects/suptertask/sources/hex.cpp">
+		<Unit filename="/home/kirill/lapsizm/workspace/projects/suptertask/sources/sort.cpp">
 			<Option target="hex"/>
 		</Unit>
 		<Unit filename="/home/kirill/lapsizm/workspace/projects/suptertask/tests/tests.cpp">

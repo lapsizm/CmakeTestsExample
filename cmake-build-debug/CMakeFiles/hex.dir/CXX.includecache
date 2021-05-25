@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-../include/hex.h
-iomanip
--
+../include/sort.h
 iostream
 -
+algorithm
+-
 
-/home/kirill/lapsizm/workspace/projects/suptertask/sources/hex.cpp
-hex.h
-/home/kirill/lapsizm/workspace/projects/suptertask/sources/hex.h
+/home/kirill/lapsizm/workspace/projects/suptertask/sources/sort.cpp
+sort.h
+/home/kirill/lapsizm/workspace/projects/suptertask/sources/sort.h
 

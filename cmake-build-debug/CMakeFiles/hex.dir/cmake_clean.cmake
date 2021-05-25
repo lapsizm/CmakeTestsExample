@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/hex.dir/sources/hex.cpp.o"
+  "CMakeFiles/hex.dir/sources/sort.cpp.o"
   "libhexd.a"
   "libhexd.pdb"
 )

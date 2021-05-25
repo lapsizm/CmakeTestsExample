@@ -12,21 +12,21 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 option(BUILD_EXAMPLES "Build examples" ON)
 option(BUILD_TESTS "Build tests" ON)
 
-project(hex)
-set(HEX_VERSION_MAJOR 0)
-set(HEX_VERSION_MINOR 1)
-set(HEX_VERSION_PATCH 0)
-set(HEX_VERSION_TWEAK 0)
-set(HEX_VERSION
-        ${HEX_VERSION_MAJOR}.${HEX_VERSION_MINOR}.${HEX_VERSION_PATCH}.${HEX_VERSION_TWEAK})
-set(HEX_VERSION_STRING "v${HEX_VERSION}")
+project(sort)
+set(SORT_VERSION_MAJOR 0)
+set(SORT_VERSION_MINOR 1)
+set(SORT_VERSION_PATCH 0)
+set(SORT_VERSION_TWEAK 0)
+set(SORT_VERSION
+        ${SORT_VERSION_MAJOR}.${SORT_VERSION_MINOR}.${SORT_VERSION_PATCH}.${SORT_VERSION_TWEAK})
+set(SORT_VERSION_STRING "v${SORT_VERSION}")
 
 hunter_add_package(GTest)
 find_package(GTest CONFIG REQUIRED)
 
-add_library(hex STATIC ${CMAKE_CURRENT_SOURCE_DIR}/sources/hex.cpp)
+add_library(sort STATIC ${CMAKE_CURRENT_SOURCE_DIR}/sources/sort.cpp)
 
-target_include_directories(hex PUBLIC
+target_include_directories(sort PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:include>
         )
@@ -36,21 +36,21 @@ if(BUILD_EXAMPLES)
     foreach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
         get_filename_component(EXAMPLE_NAME ${EXAMPLE_SOURCE} NAME_WE)
         add_executable(${EXAMPLE_NAME} ${EXAMPLE_SOURCE})
-        target_link_libraries(${EXAMPLE_NAME} hex)
+        target_link_libraries(${EXAMPLE_NAME} sort)
         install(TARGETS ${EXAMPLE_NAME}
                 RUNTIME DESTINATION bin
                 )
     endforeach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
 endif()
 
-install(TARGETS hex
-        EXPORT hex-config
+install(TARGETS sort
+        EXPORT sort-config
         ARCHIVE DESTINATION lib
         LIBRARY DESTINATION lib
         )
 
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION include)
-install(EXPORT hex-config DESTINATION cmake)
+install(EXPORT sort-config DESTINATION cmake)
 
 if(BUILD_TESTS)
     enable_testing()

@@ -158,5 +158,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/check.dir/DependInfo.cmake"
   "CMakeFiles/demo.dir/DependInfo.cmake"
-  "CMakeFiles/hex.dir/DependInfo.cmake"
+  "CMakeFiles/sort.dir/DependInfo.cmake"
   )

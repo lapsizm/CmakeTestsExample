@@ -87,17 +87,6 @@ install/local/fast: preinstall/fast
 	/snap/clion/151/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/snap/clion/151/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
@@ -109,16 +98,16 @@ package/fast: package
 
 .PHONY : package/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/151/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/snap/clion/151/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target test
+test/fast: test
 
-.PHONY : edit_cache/fast
+.PHONY : test/fast
 
 # Special rule for the target package_source
 package_source:
@@ -130,6 +119,17 @@ package_source:
 package_source/fast: package_source
 
 .PHONY : package_source/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/snap/clion/151/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -235,17 +235,17 @@ demo/fast:
 .PHONY : demo/fast
 
 #=============================================================================
-# Target rules for targets named hex
+# Target rules for targets named sort
 
 # Build rule for target.
-hex: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hex
-.PHONY : hex
+sort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sort
+.PHONY : sort
 
 # fast build rule for target.
-hex/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/build
-.PHONY : hex/fast
+sort/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/build
+.PHONY : sort/fast
 
 examples/demo.o: examples/demo.cpp.o
 
@@ -274,32 +274,32 @@ examples/demo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/examples/demo.cpp.s
 .PHONY : examples/demo.cpp.s
 
-sources/hex.o: sources/hex.cpp.o
+sources/sort.o: sources/sort.cpp.o
 
-.PHONY : sources/hex.o
+.PHONY : sources/sort.o
 
 # target to build an object file
-sources/hex.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/sources/hex.cpp.o
-.PHONY : sources/hex.cpp.o
+sources/sort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/sources/sort.cpp.o
+.PHONY : sources/sort.cpp.o
 
-sources/hex.i: sources/hex.cpp.i
+sources/sort.i: sources/sort.cpp.i
 
-.PHONY : sources/hex.i
+.PHONY : sources/sort.i
 
 # target to preprocess a source file
-sources/hex.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/sources/hex.cpp.i
-.PHONY : sources/hex.cpp.i
+sources/sort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/sources/sort.cpp.i
+.PHONY : sources/sort.cpp.i
 
-sources/hex.s: sources/hex.cpp.s
+sources/sort.s: sources/sort.cpp.s
 
-.PHONY : sources/hex.s
+.PHONY : sources/sort.s
 
 # target to generate assembly for a file
-sources/hex.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hex.dir/build.make CMakeFiles/hex.dir/sources/hex.cpp.s
-.PHONY : sources/hex.cpp.s
+sources/sort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/sources/sort.cpp.s
+.PHONY : sources/sort.cpp.s
 
 tests/tests.o: tests/tests.cpp.o
 
@@ -345,13 +345,13 @@ help:
 	@echo "... test"
 	@echo "... check"
 	@echo "... demo"
-	@echo "... hex"
+	@echo "... sort"
 	@echo "... examples/demo.o"
 	@echo "... examples/demo.i"
 	@echo "... examples/demo.s"
-	@echo "... sources/hex.o"
-	@echo "... sources/hex.i"
-	@echo "... sources/hex.s"
+	@echo "... sources/sort.o"
+	@echo "... sources/sort.i"
+	@echo "... sources/sort.s"
 	@echo "... tests/tests.o"
 	@echo "... tests/tests.i"
 	@echo "... tests/tests.s"

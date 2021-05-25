@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kirill/lapsizm/workspace/projects/suptertask/sources/hex.cpp" "/home/kirill/lapsizm/workspace/projects/suptertask/cmake-build-debug/CMakeFiles/hex.dir/sources/hex.cpp.o"
+  "/home/kirill/lapsizm/workspace/projects/suptertask/sources/sort.cpp" "/home/kirill/lapsizm/workspace/projects/suptertask/cmake-build-debug/CMakeFiles/hex.dir/sources/sort.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

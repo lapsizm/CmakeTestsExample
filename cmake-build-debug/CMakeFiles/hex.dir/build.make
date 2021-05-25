@@ -76,27 +76,27 @@ include CMakeFiles/hex.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/hex.dir/flags.make
 
-CMakeFiles/hex.dir/sources/hex.cpp.o: CMakeFiles/hex.dir/flags.make
-CMakeFiles/hex.dir/sources/hex.cpp.o: ../sources/hex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/lapsizm/workspace/projects/suptertask/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hex.dir/sources/hex.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hex.dir/sources/hex.cpp.o -c /home/kirill/lapsizm/workspace/projects/suptertask/sources/hex.cpp
+CMakeFiles/hex.dir/sources/sort.cpp.o: CMakeFiles/hex.dir/flags.make
+CMakeFiles/hex.dir/sources/sort.cpp.o: ../sources/sort.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/lapsizm/workspace/projects/suptertask/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hex.dir/sources/sort.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hex.dir/sources/sort.cpp.o -c /home/kirill/lapsizm/workspace/projects/suptertask/sources/sort.cpp
 
-CMakeFiles/hex.dir/sources/hex.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hex.dir/sources/hex.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirill/lapsizm/workspace/projects/suptertask/sources/hex.cpp > CMakeFiles/hex.dir/sources/hex.cpp.i
+CMakeFiles/hex.dir/sources/sort.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hex.dir/sources/sort.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirill/lapsizm/workspace/projects/suptertask/sources/sort.cpp > CMakeFiles/hex.dir/sources/sort.cpp.i
 
-CMakeFiles/hex.dir/sources/hex.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hex.dir/sources/hex.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirill/lapsizm/workspace/projects/suptertask/sources/hex.cpp -o CMakeFiles/hex.dir/sources/hex.cpp.s
+CMakeFiles/hex.dir/sources/sort.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hex.dir/sources/sort.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirill/lapsizm/workspace/projects/suptertask/sources/sort.cpp -o CMakeFiles/hex.dir/sources/sort.cpp.s
 
 # Object files for target hex
 hex_OBJECTS = \
-"CMakeFiles/hex.dir/sources/hex.cpp.o"
+"CMakeFiles/hex.dir/sources/sort.cpp.o"
 
 # External object files for target hex
 hex_EXTERNAL_OBJECTS =
 
-libhexd.a: CMakeFiles/hex.dir/sources/hex.cpp.o
+libhexd.a: CMakeFiles/hex.dir/sources/sort.cpp.o
 libhexd.a: CMakeFiles/hex.dir/build.make
 libhexd.a: CMakeFiles/hex.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kirill/lapsizm/workspace/projects/suptertask/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libhexd.a"
